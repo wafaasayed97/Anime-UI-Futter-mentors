@@ -1,4 +1,3 @@
-import 'package:anime_assignment2/features/anime_detail_screen/anime_detail_screen.dart';
 import 'package:anime_assignment2/features/home_screen/home_screen.dart';
 import 'package:anime_assignment2/features/upgrade_plan/upgrade_plan_screen.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,7 @@ class MainScreenState extends State<MainScreen> {
         index: currentIndex,
         children: [
           HomeScreen(),
-          AnimeDetailScreen(),
+          Placeholder(),
           UpgradePlanScreen(),
           Placeholder(),
           Placeholder(),

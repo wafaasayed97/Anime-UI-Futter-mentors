@@ -104,48 +104,48 @@ class _HomeScreenState extends State<HomeScreen>
                       ],
                     ),
                     SizedBox(height: 20.h),
-                    SizedBox(
-                      height: 350.h,
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 3,
-                        itemBuilder: (context, index) {
-                          final animeData = [
-                            {
-                              'title': 'Detective Conan',
-                              'subtitle': 'mystery',
-                              'rating': 4.8,
-                              'assetName': 'assets/images/dragon_ball.jpg',
-                            },
-                            {
-                              'title': 'Hunter x Hunter',
-                              'subtitle': 'mystery',
-                              'rating': 4.9,
-                              'assetName': 'assets/images/hunter.png',
-                            },
+                   // Replace the ListView.builder section in your HomeScreen with this:
+SizedBox(
+  height: 350.h,
+  child: ListView.builder(
+    scrollDirection: Axis.horizontal,
+    itemCount: 3,
+    itemBuilder: (context, index) {
+      final animeData = [
+        {
+          'title': 'Detective Conan',
+          'subtitle': 'mystery',
+          'rating': 4.8,
+          'assetName': 'assets/images/dragon_ball.jpg',
+        },
+        {
+          'title': 'Hunter x Hunter',
+          'subtitle': 'adventure',
+          'rating': 4.9,
+          'assetName': 'assets/images/hunter.png',
+        },
+        {
+          'title': 'Demon Slayer',
+          'subtitle': 'action',
+          'rating': 4.6,
+          'assetName': 'assets/images/conan.png',
+        },
+      ];
 
-                            {
-                              'title': 'Demon Slayer',
-                              'subtitle': 'mystery',
-                              'rating': 4.6,
-                              'assetName': 'assets/images/conan.png',
-                            },
-                          ];
-
-                          final anime = animeData[index];
-                          return Container(
-                            width: 200.w,
-                            margin: EdgeInsets.only(right: 16),
-                            child: AnimeCard(
-                              title: anime['title'] as String,
-                              type: anime['subtitle'] as String,
-                              rating: anime['rating'] as double,
-                              assetName: anime['assetName'] as String,
-                            ),
-                          );
-                        },
-                      ),
-                    ),
+      final anime = animeData[index];
+      return Container(
+        width: 200.w,
+        margin: EdgeInsets.only(right: 16),
+        child: AnimeCard(
+          title: anime['title'] as String,
+          type: anime['subtitle'] as String,
+          rating: anime['rating'] as double,
+          assetName: anime['assetName'] as String,
+        ),
+      );
+    },
+  ),
+),
                     Text(
                       'Top Characters',
                       style: TextStyle(
