@@ -1,173 +1,67 @@
 # 🎌 Anime Streaming App
 
-A beautiful and modern Flutter application for anime streaming with subscription plans. The app provides users with a seamless anime watching experience with premium features.
+A beautiful and modern **Flutter application** for anime streaming with subscription plans.  
+Provides users with a seamless anime watching experience, premium features, and a clean UI inspired by top streaming platforms.
+
+---
 
 ## 📱 Screenshots
 
-The app consists of three main screens:
+The app includes **three main screens**:
 
-1. **Home Screen** - Browse and discover anime content
-2. **Anime Detail Screen** - View detailed information about selected anime
-3. **Upgrade Plan Screen** - Choose subscription plans for premium features
+1. 🏠 **Home Screen** – Browse and discover anime content  
+2. 🎬 **Anime Detail Screen** – View detailed information about a selected anime  
+3. 💳 **Upgrade Plan Screen** – Choose subscription plans for premium features  
+
+<p align="center">
+  <img src="assets/screenshots/home.png" alt="Home Screen" width="240"/>
+  <img src="assets/screenshots/details.png" alt="Anime Detail Screen" width="240"/>
+  <img src="assets/screenshots/plan.png" alt="Upgrade Plan Screen" width="240"/>
+</p>
+
+---
 
 ## ✨ Features
 
 ### 🏠 Home Screen
-- **Trending Content**: Display popular and trending anime
-- **Category Navigation**: Browse by genres (All, Popular, Trending, New Releases)
-- **Featured Anime**: Highlighted content like "Detective Conan" and "Hunter x Hunter"
-- **Character Profiles**: Top characters section featuring popular anime characters
-- **Bottom Navigation**: Easy navigation between different sections
+- 🔥 Trending & popular anime highlights  
+- 📂 Category navigation (`All`, `Popular`, `Trending`, `New Releases`)  
+- ⭐ Featured anime like **Detective Conan** & **Hunter x Hunter**  
+- 👤 Character profiles with top anime characters  
+- 📍 Bottom navigation bar for smooth app navigation  
 
 ### 🎬 Anime Detail Screen
-- **Hero Image Display**: Full-screen anime artwork with gradient overlay
-- **Dynamic Content**: Title, rating, and type information passed dynamically
-- **Genre Tags**: Visual genre indicators (Action, Adventure, Fantasy)
-- **Statistics**: View count, likes, and star ratings with custom icons
-- **Interactive Elements**: 
-  - Back navigation
-  - Preview functionality
-  - Watch Now button (navigates to subscription)
-- **Scrollable Layout**: Smooth scrolling experience with image parallax effect
+- 🎨 Hero image with gradient overlay  
+- 📊 Dynamic details: title, rating, type, and genres  
+- 🏷️ Genre tags (Action, Adventure, Fantasy)  
+- 📈 Anime stats: views, likes, and star rating  
+- 🖱️ Interactive buttons: Back, Preview, and **Watch Now**  
+- 🔄 Scrollable layout with **parallax effect**  
 
 ### 💳 Upgrade Plan Screen
-- **Premium Subscription Options**:
-  - Monthly Plan: $5 USD/Month with secure family sharing
-  - Annual Plan: $60 USD/Year with family sharing included
-- **Interactive Selection**: Tap-to-select plan options with visual feedback
-- **Modern UI**: Gradient backgrounds with rocket boy illustration
-- **State Management**: Proper selection handling with StatefulWidget
+- 📦 Subscription options:
+  - **Monthly Plan** → $5 USD/month (family sharing included)  
+  - **Annual Plan** → $60 USD/year (family sharing included)  
+- 🖱️ Tap-to-select with visual feedback  
+- 🎨 Gradient background + rocket boy illustration  
+- 🧩 StatefulWidget to manage selection state  
+
+---
 
 ## 🛠️ Technical Implementation
 
 ### Architecture
-- **Flutter Framework**: Built with Flutter for cross-platform compatibility
-- **Screen Util**: Responsive design using `flutter_screenutil`
-- **State Management**: StatefulWidget for interactive components
-- **Navigation**: MaterialPageRoute for screen transitions
+- 🏗 **Flutter** for cross-platform development  
+- 📐 **ScreenUtil** for responsive design  
+- 🔄 **StatefulWidgets** for interactive UI components  
+- 📍 **MaterialPageRoute** for screen transitions  
 
 ### Key Components
-- **Custom Widgets**: 
-  - `GenreTag`: Reusable genre display component
-  - `StatItem`: Statistics display with icons
-  - `PlanOption`: Interactive subscription plan selector
-- **Responsive Design**: All dimensions scaled using ScreenUtil
-- **Asset Management**: Organized image assets structure
-
-### Navigation Flow
-```
-Home Screen → Anime Detail Screen → Upgrade Plan Screen
-     ↑                ↑                      ↑
-  Browse Content   Watch Details      Choose Plan
-```
-
-## 🎨 Design Features
-
-### Color Scheme
-- **Primary**: Deep Purple (`Colors.deepPurple`)
-- **Accent**: Purple variations and gradients
-- **Background**: Custom purple gradients (`Color.fromRGBO(44, 30, 81, 0.75)`)
-- **Text**: White and grey variations for contrast
-
-### UI Elements
-- **Rounded Corners**: Modern card-based design
-- **Gradients**: Beautiful color transitions
-- **Icons**: Material Design icons with custom styling
-- **Typography**: Bold headers with proper hierarchy
-
-## 📁 Project Structure
-
-```
-lib/
-├── core/
-│   └── widgets/
-│       ├── genre_tag.dart
-│       ├── stat_item.dart
-│       └── plan_option.dart
-├── screens/
-│   ├── anime_detail_screen.dart
-│   └── upgrade_plan_screen.dart
-└── assets/
-    └── images/
-        ├── star_1.png
-        ├── rocket_boy.png
-        └── files&folder.png
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Flutter SDK (latest stable version)
-- Dart SDK
-- iOS Simulator / Android Emulator
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone [your-repository-url]
-   cd anime_assignment2
-   ```
-
-2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
-
-3. **Run the app**
-   ```bash
-   flutter run
-   ```
-
-### Dependencies
-
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_screenutil: ^5.9.0
-  # Add other dependencies as needed
-```
-
-## 🎯 Key Functionalities
-
-### Anime Detail Screen
-- **Dynamic Data**: Accepts `image`, `title`, `type`, and `rating` parameters
-- **Scrollable Content**: Image scrolls with content for modern UX
-- **Navigation Integration**: Seamlessly connects to subscription flow
-
-### Subscription Flow
-- **Plan Selection**: Toggle between monthly and annual plans
-- **Visual Feedback**: Selected plan highlighted with custom styling
-- **State Persistence**: Maintains selection throughout user interaction
-
-## 🔮 Future Enhancements
-
-- [ ] Video streaming integration
-- [ ] User authentication
-- [ ] Favorites and watchlist
-- [ ] Offline download functionality
-- [ ] Push notifications
-- [ ] Social features (reviews, ratings)
-- [ ] Multiple language support
-- [ ] Dark/Light theme toggle
-
-## 🤝 Contributing
-
-1. Fork the project
-2. Create your feature branch (`git checkout \b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## 👨‍💻 Developer
-
-Created with ❤️ using Flutter
+- 🏷️ `GenreTag` – Reusable genre display  
+- 📊 `StatItem` – Statistic row with icon & value  
+- 💳 `PlanOption` – Interactive subscription plan selector  
 
 ---
 
-**Note**: This is a UI/UX focused application demonstrating modern mobile app design patterns and Flutter development best practices for anime streaming platforms.
+## 📂 Project Structure
+
