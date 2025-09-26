@@ -1,5 +1,6 @@
 import 'package:anime_assignment2/core/widgets/genre_tag.dart';
 import 'package:anime_assignment2/core/widgets/stat_item.dart';
+import 'package:anime_assignment2/features/upgrade_plan/upgrade_plan_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -41,16 +42,18 @@ class AnimeDetailScreen extends StatelessWidget {
                     Positioned(
                       top: 30,
                       left: 20,
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 6,
-                        ),
-
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: Colors.white,
-                          size: 24,
+                      child: GestureDetector(
+                        onTap: () => Navigator.pop(context),
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 6,
+                          ),
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                            size: 24,
+                          ),
                         ),
                       ),
                     ),
@@ -150,12 +153,19 @@ class AnimeDetailScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               OutlinedButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  // Preview functionality - you can add preview logic here
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('Preview feature coming soon!'),
+                      backgroundColor: Colors.grey.shade700,
+                    ),
+                  );
+                },
                 icon: Icon(Icons.timer, color: Colors.white),
                 label: Text('Preview', style: TextStyle(color: Colors.white)),
                 style: OutlinedButton.styleFrom(
                   backgroundColor: Colors.grey.shade700,
-
                   padding: EdgeInsets.symmetric(
                     horizontal: 30.w,
                     vertical: 12.h,
@@ -166,7 +176,15 @@ class AnimeDetailScreen extends StatelessWidget {
               SizedBox(width: 20.w),
 
               ElevatedButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  // Navigate to upgrade plan screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UpgradePlanScreen(),
+                    ),
+                  );
+                },
                 icon: Icon(Icons.play_arrow, color: Colors.white),
                 label: Text('Watch Now', style: TextStyle(color: Colors.white)),
                 style: ElevatedButton.styleFrom(

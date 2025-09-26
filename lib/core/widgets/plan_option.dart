@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PlanOption extends StatelessWidget {
   final String title;
@@ -7,7 +7,8 @@ class PlanOption extends StatelessWidget {
   final String subtitle;
   final bool isSelected;
 
-  const PlanOption({super.key, 
+  const PlanOption({
+    super.key,
     required this.title,
     required this.price,
     required this.subtitle,
@@ -17,30 +18,20 @@ class PlanOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.all(16.sp),
       decoration: BoxDecoration(
-        color: Color(0xFF1A1A1A),
-        borderRadius: BorderRadius.circular(12),
-        border: isSelected
-            ? Border.all(color: Colors.blue, width: 2)
-            : Border.all(color: Colors.grey.withOpacity(0.3)),
+        color: isSelected ? Colors.deepPurple.shade900 : Colors.white,
+        borderRadius: BorderRadius.circular(25.r),
       ),
       child: Row(
         children: [
-          Container(
-            width: 40,
-            height: 30,
-            decoration: BoxDecoration(
-              color: Colors.blue.withOpacity(0.2),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Icon(
-              Icons.credit_card,
-              color: Colors.blue,
-              size: 20,
-            ),
+          SizedBox(
+            width: 75.w,
+            height: 75.h,
+
+            child: Image.asset('assets/images/files&folder.png'),
           ),
-          SizedBox(width: 16),
+          SizedBox(width: 16.w),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +39,7 @@ class PlanOption extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: isSelected ? Colors.white : Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
@@ -56,16 +47,13 @@ class PlanOption extends StatelessWidget {
                 Text(
                   price,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: isSelected ? Colors.white : Colors.black,
                     fontSize: 14,
                   ),
                 ),
                 Text(
                   subtitle,
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 12,
-                  ),
+                  style: TextStyle(color: Colors.grey, fontSize: 12),
                 ),
               ],
             ),
