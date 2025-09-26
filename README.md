@@ -13,12 +13,6 @@ The app includes **three main screens**:
 2. 🎬 **Anime Detail Screen** – View detailed information about a selected anime  
 3. 💳 **Upgrade Plan Screen** – Choose subscription plans for premium features  
 
-<p align="center">
-  <img src="assets/screenshots/home.png" alt="Home Screen" width="240"/>
-  <img src="assets/screenshots/details.png" alt="Anime Detail Screen" width="240"/>
-  <img src="assets/screenshots/plan.png" alt="Upgrade Plan Screen" width="240"/>
-</p>
-
 ---
 
 ## ✨ Features
@@ -61,7 +55,5 @@ The app includes **three main screens**:
 - 📊 `StatItem` – Statistic row with icon & value  
 - 💳 `PlanOption` – Interactive subscription plan selector  
 
----
 
-## 📂 Project Structure
 
