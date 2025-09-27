@@ -13,7 +13,10 @@ The app includes **three main screens**:
 2. 🎬 **Anime Detail Screen** – View detailed information about a selected anime  
 3. 💳 **Upgrade Plan Screen** – Choose subscription plans for premium features  
 
----
+---![screen_1](https://github.com/user-attachments/assets/26d85955-884f-44a2-84c0-f8429e315acd)
+![screen_2](https://github.com/user-attachments/assets/8e89f214-3e47-4b21-8884-b69fc6d1d925)
+![screen_3](https://github.com/user-attachments/assets/ca4e0b8a-acc4-4721-b997-96bf5e23892b)
+
 
 ## ✨ Features
 
