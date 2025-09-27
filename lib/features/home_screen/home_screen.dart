@@ -1,5 +1,6 @@
 import 'package:anime_assignment2/core/widgets/anime_card.dart';
 import 'package:anime_assignment2/core/widgets/character_card.dart';
+import 'package:anime_assignment2/features/home_screen/widgets/tab_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -78,32 +79,7 @@ class _HomeScreenState extends State<HomeScreen>
                     ),
                     SizedBox(height: 20.h),
 
-                    TabBar(
-                      controller: _tabController,
-                      indicator: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25.r),
-                        color: Colors.deepPurpleAccent,
-                      ),
-                      indicatorSize: TabBarIndicatorSize.tab,
-                      dividerColor: Colors.transparent,
-                      indicatorPadding: EdgeInsets.symmetric(
-                        vertical: 5.w,
-                        horizontal: 12.w,
-                      ),
-                      labelColor: Colors.white,
-                      unselectedLabelStyle: TextStyle(
-                        fontWeight: FontWeight.normal,
-                      ),
-                      unselectedLabelColor: Colors.deepPurpleAccent,
-                      labelStyle: TextStyle(fontWeight: FontWeight.w600),
-                      tabs: [
-                        Tab(text: 'All'),
-                        Tab(text: 'Popular'),
-                        Tab(text: 'Trending'),
-                        Tab(text: 'New Releases'),
-                      ],
-                    ),
-                    SizedBox(height: 20.h),
+                    TabBarWidget(tabController: _tabController),
                     SizedBox(
                       height: 350.h,
                       child: ListView.builder(
@@ -182,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen>
                               'name': ' Goku',
                               'anime': 'dragon ball',
                               'color': Colors.brown,
-                              'image': 'assets/images/gogo_dragon.png',
+                              'image': 'assets/images/gogo_dragon.jpg',
                             },
                           ];
 
